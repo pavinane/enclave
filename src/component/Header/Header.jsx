@@ -16,7 +16,7 @@ const MenuList = [
   },
   {
     name: "Career",
-    link: "/career", // Fixed typo here (was "/carrer")
+    link: "/career",
   },
 ];
 
