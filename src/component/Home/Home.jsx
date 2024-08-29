@@ -1,73 +1,58 @@
 import React from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+
 import casros1 from "../../assets/caros1.png";
 import casros2 from "../../assets/caros2.png";
-// import casros3 from "../../assets/caros3.png";
+import CarouselSlider from "../Common/Carousel";
+import arrow from "../../assets/Arrow.png";
 
-const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 3000 },
-    items: 3,
+const ImageDatas = [
+  {
+    img: casros1,
   },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3,
+  {
+    img: casros2,
   },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
+  {
+    img: casros1,
   },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
+  {
+    img: casros2,
   },
-};
+];
+
 function Home() {
   return (
-    <div className=" text-3xl text-red-500 underline">
-      <div className="my-8 px-4 ">
-        <Carousel
-          draggable
-          showDots={false}
-          responsive={responsive}
-          ssr={true}
-          infinite
-          autoPlaySpeed={500}
-          transitionDuration={500}
-          containerClass="carousel-container"
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-          dotListClass="custom-dot-list-style"
-          itemClass="carousel-item-padding-40-px"
-          arrows={false}
-          autoPlay
-          slidesToSlide={1}
-          swipeable
-          keyBoardControl
-          minimumTouchDrag={80}
-          pauseOnHover
-          renderArrowsWhenDisabled={false}
-          renderButtonGroupOutside={false}
-          renderDotsOutside={false}
-          centerMode={false}
-          customTransition="all 0.5s linear"
-        >
-          <div className=" mr-3">
-            <img src={casros1} alt="caro1" className="h-80" />
-          </div>
-          <div className=" mr-3">
-            <img src={casros2} alt="caro2" className="h-80" />
-          </div>
-
-          <div className=" mr-3">
-            <img src={casros2} alt="caro2" className="h-80" />
-          </div>
-          <div className=" mr-3">
-            <img src={casros1} alt="caro1" className="h-80" />
-          </div>
-        </Carousel>
+    <section>
+      <div className=" text-3xl text-red-500 underline">
+        <div className="my-8 px-4 ">
+          <CarouselSlider imageData={ImageDatas} />
+        </div>
       </div>
-    </div>
+      <div className="flex justify-center items-center flex-col gap-3">
+        <h1 className="text-3xl font-bold font-inter">
+          Get Custom Prefab Furniture's{" "}
+        </h1>
+        <h3 className="text-2xl font-medium font-inter">
+          U Desire we build it{" "}
+        </h3>
+        <p className="text-[1rem] font-medium font-inter">
+          we do offer out solutions for both Business projects and customer
+          projects
+        </p>
+
+        <button
+          className="bg-[#F9FF79] hover:bg-yellow-400-700 text-black font-medium py-2
+         px-6 rounded-lg w-36 text-[1rem] flex items-center justify-between
+         md:px-6 
+         lg:px-6"
+        >
+          Reach Us
+          <span>
+            <img src={arrow} alt="arrow" className="w-6 h-6" />
+          </span>
+        </button>
+      </div>
+    </section>
   );
 }
 
