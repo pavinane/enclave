@@ -61,12 +61,12 @@ function Home() {
             Getting a quick and great quality prefab <br /> furniture's are hard
             but we made it <br /> Easier
           </h1>
-          <div className="flex justify-center col items-center">
-            <div className="img_crd basis-1/3">
-              <img src={mirror} alt="img1" className="w-fit h-[600px]" />
+          <div className="grid grid-cols-2 gap-8 justify-items-end">
+            <div className="img_crd ">
+              <img src={mirror} alt="img1" className="w-fit h-2/3" />
             </div>
-            <div className="img_para basis-1/2 p-6 justify-self-center">
-              <p className="text-center text-[1rem] w-2/3">
+            <div className="img_para  justify-self-center ">
+              <p className="text-center py-12  text-base w-3/4 ">
                 Welcome to V.R. Furniture Company where we are the Modular
                 Office, Residential, Kitchen, and Bedroom Furniture
                 manufacturers and suppliers in Ahmedabad. We are the
