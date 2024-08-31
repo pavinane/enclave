@@ -2,25 +2,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 3000 },
-    items: 3,
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
-};
-function CarouselSlider({ imageData }) {
+function CarouselSlider({ imageData, responsive, className }) {
   return (
     <div>
       <Carousel
@@ -50,8 +32,8 @@ function CarouselSlider({ imageData }) {
       >
         {imageData.map((item, index) => {
           return (
-            <div className=" mr-3">
-              <img src={item?.img} alt="caro1" className="h-80" />
+            <div className={className}>
+              <img src={item?.img} alt="caro1" className="h-80 w-screen" />
             </div>
           );
         })}

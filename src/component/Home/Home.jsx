@@ -1,33 +1,41 @@
 import React from "react";
 
-import casros1 from "../../assets/caros1.png";
-import casros2 from "../../assets/caros2.png";
 import CarouselSlider from "../Common/Carousel";
 import arrow from "../../assets/Arrow.png";
 import mirror from "../../assets/mirror.png";
+import DoneBefore from "./DoneBefore";
+import { ImageDatas } from "../Data/imageData";
 
-const ImageDatas = [
-  {
-    img: casros1,
+const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 3,
   },
-  {
-    img: casros2,
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
   },
-  {
-    img: casros1,
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
   },
-  {
-    img: casros2,
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
   },
-];
+};
 
 function Home() {
   return (
-    <section className="bg-[#D9D9D9] mb-6 flex gap-6 flex-col">
+    <section className="bg-[#D9D9D9] mb-6 flex  flex-col">
       <div className="bg-white ">
         <div className=" text-3xl text-red-500 underline">
           <div className="my-8 px-4 ">
-            <CarouselSlider imageData={ImageDatas} />
+            <CarouselSlider
+              imageData={ImageDatas}
+              responsive={responsive}
+              className="mr-3"
+            />
           </div>
         </div>
         <div className="flex justify-center items-center flex-col gap-3 mb-10">
@@ -62,8 +70,8 @@ function Home() {
             but we made it <br /> Easier
           </h1>
           <div className="grid grid-cols-2 gap-8 justify-items-end">
-            <div className="img_crd ">
-              <img src={mirror} alt="img1" className="w-fit h-2/3" />
+            <div className="img_crd h-[600px]">
+              <img src={mirror} alt="img1" className="w-fit h-full" />
             </div>
             <div className="img_para  justify-self-center ">
               <p className="text-center py-12  text-base w-3/4 ">
@@ -91,6 +99,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <DoneBefore />
     </section>
   );
 }
