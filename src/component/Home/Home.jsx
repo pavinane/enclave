@@ -6,6 +6,7 @@ import mirror from "../../assets/mirror.png";
 import DoneBefore from "./DoneBefore";
 import { ImageDatas } from "../Data/imageData";
 import ContactUs from "./ContactUs";
+import Solution from "./Solution";
 
 const responsive = {
   superLargeDesktop: {
@@ -101,6 +102,7 @@ function Home() {
         </div>
       </div>
       <DoneBefore />
+      <Solution />
       <ContactUs />
     </section>
   );

@@ -4,6 +4,7 @@ import Home from "./component/Home/Home";
 import About from "./component/About/About";
 import Header from "./component/Common/Header/Header";
 import Footer from "./component/Common/Footer/Footer";
+import FlipAnimation from "./component/Home/ScrollImage";
 
 const AppLayout = () => (
   <>
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       { path: "/about", element: <About /> },
+      { path: "/scroll", element: <FlipAnimation /> },
     ],
   },
 ]);
